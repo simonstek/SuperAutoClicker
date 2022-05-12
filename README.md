@@ -29,7 +29,7 @@ Currently available only for Windows OS (Windows 7, 8, 10, or 11).
 
 ## Download
 
-Download the latest version from the [releases](https://github.com/simonstek/SuperAutoClicker/releases) page, unzip and run SuperAutoClicker.exe.
+Download the latest version from the [releases](https://github.com/simonstek/SuperAutoClicker/releases) page, run SuperAutoClicker_v1.x.x.x.exe to install.
 
 
 
