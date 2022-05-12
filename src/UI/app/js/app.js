@@ -145,6 +145,9 @@ class MainApp extends AppElement {
             await self.launchOfficialWebsite()
         })
 
+        // version label
+        $('#bottom_version_label').innerHTML = @'V{1}.{2}'.format(N.nativeVersion, B.UIVersion)
+
         document.on('click', '#bottom_about_btn', async () => {
             createToolWindow('about.html')
         })

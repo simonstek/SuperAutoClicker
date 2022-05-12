@@ -131,4 +131,4 @@ Set `SuperAutoClicker` as startup project. Start debugging. You'll see the softw
 
 
 
-![image-20220512104300915](doc/readme/img/README/image-20220512104300915.png)
+![image-20220512105444235](doc/readme/img/README/image-20220512105444235.png)
