@@ -110,3 +110,25 @@ Type `python configure_client.py` and wait for the configuration steps to finish
 If everything is OK, you'll see the results like below:
 
 ![image-20220512103407987](doc/readme/img/README/image-20220512103407987.png)
+
+
+
+
+
+### Build Project
+
+Open `SuperAutoClicker.sln` using VS2022. Rebuild entire solution and wait.
+
+If everything is OK, you'll see the compilation result:
+
+![image-20220512104011524](doc/readme/img/README/image-20220512104011524.png)
+
+Set `SuperAutoClicker` as startup project. Start debugging. You'll see the software is finally shown up:
+
+
+
+![image-20220512104300915](doc/readme/img/README/image-20220512104132663.png)
+
+
+
+![image-20220512104300915](doc/readme/img/README/image-20220512104300915.png)
