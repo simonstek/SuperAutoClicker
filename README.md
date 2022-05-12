@@ -35,7 +35,7 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
 ## Build
 
-#### Environment Setup
+### Environment Setup
 
 1. Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/). Make sure you have selected "Desktop development with C++":
 
@@ -77,7 +77,7 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
 
 
-#### Project Setup
+### Project Setup
 
 Open command prompt. `cd` to `your-super-auto-clicker-git-repository\cnf`:
 
