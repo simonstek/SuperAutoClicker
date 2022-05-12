@@ -37,7 +37,7 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
 ### Environment Setup
 
-1. Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/). Make sure you have selected "Desktop development with C++":
+1. Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/). Make sure you have selected "`Desktop development with C++`":
 
    ![image-20220512094230316](doc/readme/img/README/image-20220512094230316.png)
 
