@@ -68,12 +68,11 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 5. Download and install [Python](https://www.python.org/downloads/). Python version must be >= 3.8. Make sure you have selected `Add Python to environment variables`:
 
    ![image-20220512095803143](doc/readme/img/README/image-20220512095803143.png)
-
    
 
-   Open command prompt and type `python --version`. Then press Enter key.
+   Once finished, open command prompt and type `python --version`, then press Enter key.
 
-   If your Python is installed correctly, you can see the Python version:
+   If your Python is installed correctly, you'll see the Python version:
 
    ![image-20220512101238746](doc/readme/img/README/image-20220512101238746.png)
 
@@ -84,12 +83,11 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
    ![image-20220512102632446](doc/readme/img/README/image-20220512102632446.png)
 
 
+   Open command prompt and type `unzip` to check whether your git commands is correctly configured.
 
-Open command prompt and type `unzip` to check whether your git commands is correctly configured.
+   If everything is OK, you'll see the results like below:
 
-If everything is OK, you'll see the results like below:
-
-![image-20220512102849081](doc/readme/img/README/image-20220512102849081.png)
+   ![image-20220512102849081](doc/readme/img/README/image-20220512102849081.png)
 
 
 
