@@ -35,7 +35,7 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
 ## Build
 
-**Environment Setup**
+#### Environment Setup
 
 1. Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/). Make sure you have selected "Desktop development with C++":
 
@@ -61,7 +61,7 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
    ![image-20220512094909092](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512094909092.png)
 
-   As seen above, the `Version` tag must be set to `Qt 5.6.2`. The `path` tag should be set to  `<your Qt 5.6.2 installation direcotry>\5.6\msvs2015`. Then click OK to finish Qt version setup.
+   As seen above, the `Version` tag must be set to `Qt 5.6.2`. The `path` tag should be set to  `<your-Qt-5.6.2-installation-direcotry>\5.6\msvs2015`. Then click OK to finish Qt version setup.
 
    
 
@@ -69,11 +69,17 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
    ![image-20220512095803143](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512095803143.png)
 
+   Open command prompt and type `python --version`. Then press Enter key.
+
+   If your Python is installed correctly, you can see the Python version:
+
+   ![image-20220512101238746](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512101238746.png)
 
 
 
+#### Project Setup
 
-**Project Setup**
+Open command prompt. `cd` to `your-super-auto-clicker-git-repository\cnf`:
 
-
+![image-20220512100540179](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512100540179.png)
 
