@@ -69,17 +69,44 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
    ![image-20220512095803143](doc/readme/img/README/image-20220512095803143.png)
 
+   
+
    Open command prompt and type `python --version`. Then press Enter key.
 
    If your Python is installed correctly, you can see the Python version:
 
    ![image-20220512101238746](doc/readme/img/README/image-20220512101238746.png)
 
+   
+
+6. Setup unzip command. Add `<your-git-installation-directory>\usr\bin` to system environment variables:
+
+   ![image-20220512102632446](doc/readme/img/README/image-20220512102632446.png)
+
+
+
+Open command prompt and type `unzip` to check whether your git commands is correctly configured.
+
+If everything is OK, you'll see the results like below:
+
+![image-20220512102849081](doc/readme/img/README/image-20220512102849081.png)
+
 
 
 ### Project Setup
 
-Open command prompt. `cd` to `your-super-auto-clicker-git-repository\cnf`:
+Open command prompt and`cd` to `your-super-auto-clicker-git-repository\cnf`:
 
 ![image-20220512100540179](doc/readme/img/README/image-20220512100540179.png)
 
+ 
+
+Type `python configure_client.py` and wait for the configuration steps to finish:
+
+![image-20220512103151041](doc/readme/img/README/image-20220512103151041.png)
+
+
+
+If everything is OK, you'll see the results like below:
+
+![image-20220512103407987](doc/readme/img/README/image-20220512103407987.png)
