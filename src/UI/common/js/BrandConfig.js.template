@@ -1,0 +1,15 @@
+import '/common/js/StringUtil'
+
+export const UIVersion				= '{UI_VERSION}'
+
+export const ServerUrl				= '{SERVER_URL}'
+
+export const ProcessName			= '{PROCESS_NAME}'
+
+export const AppId					= {APP_ID}
+
+export const Domain					= '{DOMAIN}'
+
+export const TranslatedBrandName	= @'{BRAND_TITLE}'
+
+export const Company				= '{COMPANY}'

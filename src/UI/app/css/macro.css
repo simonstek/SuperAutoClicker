@@ -1,0 +1,97 @@
+#caption {
+  /*display: inline-block;*/
+  padding: 0dip 0dip 0dip 10dip;
+  flow: horizontal;
+  vertical-align: middle;
+  background: var(caption_background);
+  /*border-bottom: 1dip solid rgba(255, 255, 255, 0.08);*/
+}
+
+#logo_img {
+  width: 16dip;
+  height: 16dip;
+}
+#title_label {
+  margin-left: 4dip;
+}
+
+.squre_btn {
+  behavior: button;
+  background: none;
+  background-position: center;
+  width: 36dip;
+  height: 36dip;
+  margin: 0;
+  padding: 0;
+}
+.squre_btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  background-position: center;
+}
+
+#close_btn {
+  foreground-size: 20dip;
+  opacity: 0.7;
+}
+
+#container {
+}
+
+#content {
+  min-width: 700dip;
+  position: relative;
+  background: var(app_background);
+  vertical-align: middle;
+  /*border: 1dip red solid;*/
+}
+
+#main {
+  padding: 20dip;
+  horizontal-align: center;
+  min-height: 396dip;
+  max-height: 700dip;
+}
+
+#macro_name_edit {
+  margin-left: 10dip;
+  height: 16dip;
+  width: *;
+}
+
+#actions_table {
+  margin-top: 10dip;
+  border: 2dip var(spliter_color) solid;
+}
+
+.table_row {
+  border: 1dip green dotted;
+}
+
+.table_row td {
+  height: 20dip;
+  color: #ffffffbb;
+}
+
+.table_row:hover {
+  background: var(btn_foreground);
+}
+
+#btns_line {
+  margin-top: 20dip;
+  flow: horizontal;
+  horizontal-align: center;
+}
+
+.btn {
+  background: var(front_color);
+  opacity: 0.9;
+  width: 50dip;
+}
+
+.btn:hover {
+  opacity: 1.0;
+}
+
+#schedule_btn {
+  margin-left: 20dip;
+}

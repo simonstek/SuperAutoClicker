@@ -1,0 +1,15 @@
+{
+    "nativeVersion": "1.0.0",
+    "uiVersion": "0",
+    "brands": {
+        "superautoclicker.com": {
+            "appId": 10001,
+            "pageTitle": "Super Auto Clicker - a free and powerful auto clicker",
+            "logoTitle": "Super Auto Clicker",
+            "processName": "SuperAutoClicker",
+            "serverURL": "https://server.powerclicker.net:8443/jeecg-boot/powerclicker",
+            "company": "SimonsTek Inc., Ltd",
+            "uiLoadingEntrance": "http://ui.powerclicker.net"
+        }
+    }
+}

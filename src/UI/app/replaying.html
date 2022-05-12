@@ -1,0 +1,45 @@
+<html lang="zh"
+   window-resizable="false"
+   window-frame="transparent"
+   window-icon="/common/img/logo.png"
+   theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BrandName Loading Window</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/replaying.css" rel="stylesheet">
+
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import * as B from '/common/js/BrandConfig'
+  import { BaseElement } from '/common/js/BaseElement'
+  class ReplayingElement extends BaseElement {
+    render() {
+      var self = this
+      return <body>
+        <div id="container">
+          <div id="content">
+            <div id="main" role="window-caption">
+              <label id="macro_name_label">unknown_macro</label>
+              <label id="pos_label">Mouse Position: X, Y</label>
+              <div id="progress_line">
+                <label id="time_up_label">333</label>
+                <progress id="replay_progress" value="30" max="100" />
+                <label id="time_left_label">5666</label>
+              </div>
+              <label id="progress_tip">Progress</label>
+            </div>
+          </div>
+        </div>
+      </body>
+    }
+  }
+  window.ReplayingElement = ReplayingElement
+  </script>
+  <script type="module" src="js/replaying.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

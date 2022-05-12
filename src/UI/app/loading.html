@@ -1,0 +1,39 @@
+<html lang="zh"
+   window-resizable="false"
+   window-frame="transparent"
+   window-icon="/common/img/logo.png"
+   theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BrandName Loading Window</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/loading.css" rel="stylesheet">
+
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import * as B from '/common/js/BrandConfig'
+  import { BaseElement } from '/common/js/BaseElement'
+  class LoadingElement extends BaseElement {
+    render() {
+      return <body role="window-caption">
+        <div id="container">
+          <div id="content">
+              <div id="logo_line">
+                  <img id="logo_img" src="/common/img/logo.svg"/>
+                  <label id="title_label">{B.TranslatedBrandName}</label>
+              </div>
+              <div id="subtitle_line"><label id="subtitle_label">The best auto clicker ever</label></div>
+          </div>
+        </div>
+      </body>
+    }
+  }
+  window.LoadingElement = LoadingElement
+  </script>
+  <script type="module" src="js/loading.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

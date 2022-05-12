@@ -1,0 +1,56 @@
+label {
+  font-size: 9pt;
+}
+
+.squre_btn {
+  background: none;
+  background-position: center;
+  width: 36dip;
+  height: 36dip;
+  margin: 0;
+  padding: 0;
+}
+.squre_btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  background-position: center;
+}
+
+#container {
+}
+
+#content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4dip;
+  box-shadow: 0dip 0dip 4dip 2dip rgba(0,0,0,0.61);
+  background: var(app_background);
+  padding: 20dip 20dip;
+}
+
+#main {
+  max-height: 600dip;
+  min-width: 200dip;
+  flow: vertical;
+  horizontal-align: center;
+}
+
+#pos_label {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#time_label {
+  display: inline-block;
+  white-space: nowrap;
+  margin-top: 10dip;
+}
+
+#stop_btn {
+  margin-top: 15dip;
+  height: 30dip;
+  background: var(front_color);
+  opacity: 0.8;
+}
+##stop_btn:hover {
+  opacity: 1.0;
+}

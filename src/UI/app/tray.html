@@ -1,0 +1,40 @@
+﻿<html lang="zh"
+   window-resizable="false"
+   window-frame="transparent"
+   window-icon="/common/img/logo.png"
+   window-width="400dip"
+   window-height="200dip"
+   theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BrandName Tray Window</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/tray.css" rel="stylesheet">
+
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import '/common/js/StringUtil'
+  import * as B from '/common/js/BrandConfig'
+  import { BaseElement } from '/common/js/BaseElement'
+  class TrayElement extends BaseElement {
+
+    render() {
+      var revel = @'Show Window';
+      var about = @'About {1}'.format(B.TranslatedBrandName);
+      var exit = @'Exit';
+      return <menu.popup #tray>
+      <li#reveal><img/>{revel}</li>
+      <li#about><img/>{about}</li>
+      <li#exit><img/>{exit}</li>
+    </menu>
+      }
+  }
+  window.TrayElement = TrayElement
+  </script>
+  <script type="module" src="js/tray.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

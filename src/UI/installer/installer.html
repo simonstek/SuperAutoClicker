@@ -1,0 +1,54 @@
+﻿<html lang="en"
+    window-resizable="false"
+    window-frame="transparent"
+    window-icon="/common/img/logo.png"
+    theme="light">
+<head>
+  <meta charset="UTF-8">
+  <title>BrandName Installer</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/installer.css" rel="stylesheet">
+
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import * as B from '/common/js/BrandConfig'
+  import { BaseElement } from '/common/js/BaseElement'
+  class InstallerElement extends BaseElement {
+
+  render() {
+    return <body role="window-caption">
+      <div id="container">
+        <div id="content">
+          <img id="close_btn" class="squre_btn" src="/common/img/close.svg"></img>
+          <div id="logo_line">
+              <img id="logo_img" src="/common/img/logo.svg"/>
+              <span id="title_label">{B.TranslatedBrandName}</span>
+          </div>
+          <div id="subtitle_line"><label id="subtitle_label">The best auto clicker ever</label></div>
+          <div id="install_dir_group">
+            <button id="install_btn" class="btn">Install</button>
+            <div id="select_folder_line">
+              <input id="install_dir_input" type="text" readonly value=""/>
+              <img id="install_dir_select_btn"/>
+            </div>
+          </div>
+          <div id="install_progress_group">
+            <progress id="install_progress" value="30" max="100"/>
+            <div>
+              <label id="install_progress_tip"></label>
+              <label id="install_progress_percentage">0%</label>
+            </div>
+            <button id="start_btn" class="btn">Start</button>
+          </div>
+        </div>
+      </div>
+    </body>;
+    }
+  }
+  window.InstallerElement = InstallerElement
+  </script>
+  <script type="module" src="js/installer.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

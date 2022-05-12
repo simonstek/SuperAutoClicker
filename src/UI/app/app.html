@@ -1,0 +1,231 @@
+﻿<html lang="zh"
+   window-resizable="false"
+   window-frame="transparent"
+   window-icon="/common/img/logo.png">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BrandName</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+
+  <script type="module" src='/common/js/locale.js'></script>
+  <menu.popup #tray>
+    <li#reveal>Show Window</li>
+    <li#exit>Exit</li>
+  </menu>
+  <script type="module">
+  import * as B from '/common/js/BrandConfig'
+  import { BaseElement } from '/common/js/BaseElement'
+  import { MacroItem } from '/app/js/MacroItem'
+
+  var about = @'About {1}'.format(B.TranslatedBrandName)
+  var search = @'Search {1}'.format(B.TranslatedBrandName)
+
+  class AppElement extends BaseElement {
+    render() {
+      var official_website = @'Official website'
+      var about_us = @'About us'
+      var empty_macros_tip = @"There's no any macros yet... "
+      var empty_tasks_tip = @"There's no any tasks yet... "
+
+      return <body>
+      <div id="container">
+      <div id="caption" role="window-caption">
+        <img id="logo_img" src="/common/img/logo.svg"/>
+        <label role="window-caption" id="title_label">{B.TranslatedBrandName}</label>
+        <div style="width: *;"></div>
+        <button|menu id="menu_btn">
+          <menu.popup>
+            <li id="home_menu"><img src="/common/img/home.svg"/>{official_website}</li>
+            <li id="about_menu"><img src="/common/img/about_mono.svg"/>{about_us}</li>
+          </menu>
+        </button>
+        <img id="min_btn" class="squre_btn" src="/common/img/minimize.svg" title="minimize" />
+        <img id="close_btn" class="squre_btn" src="/common/img/close.svg" title="close" />
+      </div>
+      <div#tabs_line>
+        <select|switch#tabs>
+            <option value="click_mode" selected>
+              <div class="tab_block">
+                <img src="img/mouse_click.svg" />
+                <span @>Mouse Click</span>
+              </div>
+            </option>
+            <option value="macro_mode">
+              <div class="tab_block">
+                <img src="img/mouse_macro.svg" />
+                <span @>Macros</span>
+              </div>
+            </option>
+            <option value="task_mode">
+              <div class="tab_block">
+                <img src="img/task_flow.svg" />
+                <span @>Tasks</span>
+              </div>
+            </option>
+            <option value="market_mode">
+              <div class="tab_block">
+                <img src="img/market.svg" />
+                <span @>Market</span>
+              </div>
+            </option>
+            <option value="tool_mode">
+              <div class="tab_block">
+                <img src="img/tools.svg" />
+                <span @>Tools</span>
+              </div>
+            </option>
+        </select>
+      </div>
+      <div id="main">
+      <div style="width: *;height: 1dip; background: rgba(0, 0, 0, 0.1); position: relative; top: 1dip"></div>
+      <div for-mode="click_mode" class="tab_page">
+        <fieldset id="click_inverval_field">
+          <legend@>Click Interval</legend>
+          <div id="click_interval_group" class="legend_first legend_div">
+            <div class="input_group">
+              <input|integer min=0 max=9999 step=1 class="interval_input no_margin_left" name="hour_interval" id="hour_interval" />
+              <label class="interval_label">hours</label>
+            </div>
+            <div class="input_group">
+              <input|integer min=0 max=9999 step=1 class="interval_input no_margin_left" name="minute_interval" id="minute_interval" />
+              <label class="interval_label">mins</label>
+            </div>
+            <div class="input_group">
+              <input|integer min=0 max=59 step=1 class="interval_input" name="second_interval" id="second_interval" />
+              <label class="interval_label">secs</label>
+            </div>
+            <div class="input_group">
+              <input|integer min=1 max=999 step=10 class="interval_input" name="millisecond_interval" id="millisecond_interval" />
+              <label class="interval_label">milliseconds</label>
+            </div>
+          </div>
+        </fieldset>
+        <div id="second_line_block">
+        <fieldset id="click_options_field">
+          <legend@>Click Options</legend>
+          <div class="legend_first legend_div">
+            <div>
+              <label class="nowrap">Mouse Button:</label>
+              <select|dropdown id="click_button_select">
+                <option value="0"@>Left</option>
+                <option value="1"@>Middle</option>
+                <option value="2"@>Right</option>
+                <option value="3"@>Side</option>
+              </select>
+            </div>
+          </div>
+          <div class="legend_div">
+            <div>
+              <label class="nowrap">Click Type:</label>
+              <select|dropdown id="click_type_select">
+                <option value="0"@>Single</option>
+                <option value="1"@>Double</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset id="click_repeat_field">
+          <legend@>Click Repeat</legend>
+          <ul id="click_repeat_group" class="radio_group legend_first legend_div">
+            <li value="0" as="integer"><label>Repeat until stopped</label></li>
+            <li value="1" as="integer" id="repeat_times_li"><label>Repeat</label><input|integer value=10 min=1 max=9999 step=1 id="repeat_time_input"/><label>times</label></li>
+          </ul>
+        </fieldset>
+        </div>
+        <fieldset id="cursor_position_field">
+          <legend@>Cursor Position</legend>
+          <ul id="cursor_location_ul" class="radio_group legend_first legend_div">
+            <li value="0" as="integer"><label>Current Location</label></li>
+            <li value="1" as="integer" id="pick_location_li"><button id="pick_location_btn">Pick Location</button>
+              <label class="loc">X</label><input|integer value=0 min=0 max=9999 id="location_x_input"/>
+              <label class="loc">Y</label><input|integer value=0 min=0 max=9999 id="location_y_input"/>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="line_block">
+          <button id="start_btn">Start</button>
+          <button id="stop_btn">Stop</button>
+        </div>
+        <div class="line_block">
+          <button id="hotkey_setting_btn">Hotkey Setting</button>
+          <button id="record_and_playback_btn">Record & Playback</button>
+        </div>
+      </div>
+      <div for-mode="macro_mode" class="tab_page">
+        <label id="empty_macros_tip" class="empty_list_tip">{empty_macros_tip}<a @>Record one</a></label>
+        <table id="macro_table">
+          <thead>
+            <tr>
+              <th class="macro_time_header" @>Create Time</th>
+              <th class="macro_name_header" @>Macro Name</th>
+              <th class="macro_duration_header" @>Duration</th>
+              <th class="macro_hotkey_header" @>Replay Hotkey</th>
+              <th class="macro_options_header" @>Operations</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="table_bottom_btns">
+          <button id="record_macro_btn">Record a macro</button>
+          <button id="clear_all_macros_btn" @>Clear all macros</button>
+        </div>
+      </div>
+
+      <div for-mode="task_mode" class="tab_page">
+        <label id="empty_tasks_tip" class="empty_list_tip">{empty_tasks_tip}<a @>Create one</a></label>
+        <table id="task_table">
+          <thead>
+            <tr>
+              <th id="task_time_header" @>Create Time</th>
+              <th id="task_edit_header" @>Edit Time</th>
+              <th id="task_name_header" @>Task Name</th>
+              <th id="task_options_header" @>Operations</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="table_bottom_btns">
+          <button id="create_task_btn">Create a task</button>
+          <button>Clear all tasks</button>
+        </div>
+      </div>
+      <div for-mode="flow_mode" class="tab_page">
+        <label id="empty_flows_tip" class="empty_list_tip">There's no any advanced tasks yet... <a>Create one</a></label>
+      </div>
+      <div for-mode="market_mode" class="tab_page">
+        <label id="empty_market_tip" class="empty_list_tip">Developing. Stay tuned...</label>
+      </div>
+      <div for-mode="tool_mode" class="tab_page">
+        <label id="empty_tools_tip" class="empty_list_tip">Developing. Stay tuned...</label>
+      </div>
+      </div>
+      <div style="height: *;"></div>
+      <div style="width: *;height: 1dip; background: rgba(255, 255, 255, 0.06); position: relative; top: 2dip"></div>
+      <div id="bottom_bar">
+        <a class="a_btn" id="bottom_search_grid" title={search} >
+          <img src="img/google_icon.png" id="bottom_google_icon"/>
+          <div id="bottom_logo_label">
+            <label>{B.TranslatedBrandName}</label>
+            <img src="img/search_icon.svg" id="bottom_search_icon" />
+            <div class="bottom_logo_underline"></div>
+          </div>
+        </a>
+        <label class="splitter_label">|</label>
+        <a class="a_btn" id="official_website_href" title="Offical website" ></a>
+        <label class="splitter_label">|</label>
+        <a id="bottom_about_btn" class="a_btn"><img src="/common/img/logo.svg" title={about} /></a>
+      </div>
+      </div>
+    </body>;
+    }
+  }
+  window.AppElement = AppElement
+  </script>
+  <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

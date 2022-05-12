@@ -1,0 +1,58 @@
+<html lang="zh"
+   window-resizable="false"
+   window-frame="transparent"
+   window-icon="/common/img/logo.png"
+   theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BrandName Modal Window</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/macro.css" rel="stylesheet">
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import { BaseElement } from '/common/js/BaseElement'
+  class MacroElement extends BaseElement {
+    render() {
+      return <body>
+        <div id="container">
+          <div id="content">
+            <div id="caption" role="window-caption">
+              <img id="logo_img" src="/common/img/logo.svg" />
+              <label id="title_label">tips</label>
+              <div style="width: *;"></div>
+              <img id="close_btn" class="squre_btn" src="/common/img/close.svg" />
+            </div>
+            <div id="main">
+              <label>Macro name: </label>
+              <input|text id="macro_name_edit" />
+              <table id="actions_table">
+                <thead>
+                  <tr>
+                    <th class="order_header">Order</th>
+                    <th class="time_header">Time</th>
+                    <th class="action_header">Action</th>
+                    <th class="param1_header">Param 1</th>
+                    <th class="param2_header">Param 2</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <div id="btns_line">
+                <button id="save_btn" class="btn">Save</button>
+                <button id="schedule_btn" class="btn">Schedule</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>;
+      }
+  }
+  window.MacroElement = MacroElement
+  </script>
+  <script type="module" src="js/macro.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

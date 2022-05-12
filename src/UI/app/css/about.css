@@ -1,0 +1,105 @@
+body {
+  height: * !important;
+}
+
+label {
+  font-size: 9pt;
+}
+
+.squre_btn {
+  background: none;
+  background-position: center;
+  width: 36dip;
+  height: 36dip;
+  margin: 0;
+  padding: 0;
+}
+.squre_btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  background-position: center;
+}
+
+#close_btn {
+  behavior: button;
+  foreground-position: 50% 50%;
+  foreground-size: 20dip;
+  /*foreground-image: url(/img/close.svg);*/
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#close_btn:hover {
+  opacity: 0.4;
+}
+
+#container {
+  min-width: 500dip;
+}
+
+#content {
+  position: relative;
+  padding-top: 30dip;
+  padding-bottom: 30dip;
+  padding-left: 36dip;
+  padding-right: 36dip;
+  /*height: *;*/
+  /*flow: vertical;*/
+  horizontal-align: center;
+  vertical-align: middle;
+  background: var(app_background);
+}
+
+#logo_line {
+  horizontal-align: center;
+  flow: horizontal;
+  /*horizontal-align: center;*/
+}
+
+#logo_img {
+  width: 50dip;
+  height: 50dip;
+}
+
+#title_label {
+  font-size: 30pt;
+  margin-left: 10dip;
+  white-space: nowrap;
+}
+
+#version_label {
+  margin-top: 10dip;
+  display: block;
+  flow: horizontal;
+  horizontal-align: center;
+  opacity: 0.2;
+}
+
+#release_label {
+  margin-top: 10dip;
+  display: block;
+  flow: horizontal;
+  horizontal-align: center;
+  opacity: 0.2;
+}
+
+#copyright_label {
+  margin-top: 10dip;
+  display: block;
+  flow: horizontal;
+  horizontal-align: center;
+  opacity: 0.2;
+}
+
+#subtitle_line {
+  flow: horizontal;
+  horizontal-align: center;
+  margin-top: 10dip;
+}
+
+#subtitle_label {
+  display: block;
+  /*margin-left: 54dip;*/
+  opacity: 0.2;
+  font-size: 10pt;
+}

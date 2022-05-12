@@ -1,0 +1,108 @@
+<html lang="zh"
+   window-resizable="false"
+   window-frame="transparent"
+   window-icon="/common/img/logo.png"
+   theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BrandName Modal Window</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/flow.css" rel="stylesheet">
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import { BaseElement } from '/common/js/BaseElement'
+  class TaskFlowElement extends BaseElement {
+    render() {
+      return <body>
+        <div id="container">
+          <div id="content">
+            <div id="caption" role="window-caption">
+              <img id="back_btn" src="/app/img/back.svg" title="Back to main window" />
+              <a id="edit_task_info_block" title="Edit task flow info">
+                <img class="icon" src="/common/img/logo.svg" />
+                <label>Task Flow</label>
+                <img class="edit" src="/app/img/edit_small.svg" />
+              </a>
+              <img id="save_btn" src="/app/img/save.svg" title="Save task flow" />
+              <div id="window_btns">
+                <a id="help_btn"><img src="/app/img/help_circle.svg" title="Task Module is in Early Access state. Stay tuned..." /><label>Help</label></a>
+                <img id="min_btn" class="squre_btn" src="/common/img/minimize.svg" title="Minimize window" />
+                <img id="max_btn" class="squre_btn" src="/common/img/maximize.svg" title="Maximize window" />
+                <img id="close_btn" class="squre_btn" src="/common/img/close.svg" title="Close window" />
+              </div>
+            </div>
+            <div id="main">
+              <div id="functions_bar">
+                <div id="command_title">
+                  <label>Commands</label>
+                  <img id="collapse_commands" src="/app/img/back_thin.svg" />
+                  <img id="fold_all" src="/app/img/fold.svg" />
+                </div>
+                <div id="search_bar">
+                <input|text id="search_commands" />
+                <img id="search_commands_icon" src="/app/img/search_commands.svg"/>
+                </div>
+                <ul id="command_tree">
+                  <li>
+                    <a class="caret"><img src="/app/img/branches.svg"/>Conditions</a>
+                    <ul class="nested">
+                      <li><a>Water</a></li>
+                      <li><a>Coffee</a></li>
+                      <li><a class="caret">Tea</a>
+                        <ul class="nested">
+                          <li><a>Black Tea</a></li>
+                          <li><a>White Tea</a></li>
+                          <li><a class="caret">Green Tea</a>
+                            <ul class="nested">
+                              <li><a>Sencha</a></li>
+                              <li><a>Gyokuro</a></li>
+                              <li><a>Matcha</a></li>
+                              <li><a>Pi Lo Chun</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>  
+                    </ul>
+                  </li>
+                  <li><a class="caret"><img src="/app/img/loops.svg"/>Loops</a></li>
+                  <li><a class="caret"><img src="/app/img/wait.svg"/>Wait</a></li>
+                  <li><a class="caret"><img src="/app/img/chrome.svg"/>Web Automation</a></li>
+                  <li><a class="caret"><img src="/app/img/desktop.svg"/>Desktop Automation</a></li>
+                  <li><a class="caret"><img src="/app/img/cursor.svg"/>Mouse & Keyboard</a></li>
+                  <li><a class="caret"><img src="/app/img/sheet.svg"/>Data Sheets</a></li>
+                  <li><a class="caret"><img src="/app/img/dialog.svg"/>Dialogs</a></li>
+                  <li><a class="caret"><img src="/app/img/os.svg"/>OS Specific</a></li>
+                  <li><a class="caret"><img src="/app/img/ai.svg"/>Artificial Intelligence</a></li>
+                  <li><a class="caret"><img src="/app/img/networking.svg"/>Networking</a></li>
+                  <li><a class="caret"><img src="/app/img/others.svg"/>Others</a></li>
+                </ul>
+              </div>
+              <div id="canvas_frame">
+                <div id="cavas_container">
+                  <div id="drag_tip">
+                    <img src="/app/img/drag_and_drop.svg" />
+                    <label>Drag commands here from the Command Area on the left</label>
+                  </div>
+                  <canvas id="canvas" />
+                  <div id="task_block_layer" />
+                </div>
+              </div>
+              <div id="edit_bar"></div>
+            </div>
+            <div id="footer">
+              <label id="status_label">Task flow name: </label>
+            </div>
+          </div>
+        </div>
+      </body>;
+      }
+  }
+  window.TaskFlowElement = TaskFlowElement
+  </script>
+  <script type="module" src="js/flow.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

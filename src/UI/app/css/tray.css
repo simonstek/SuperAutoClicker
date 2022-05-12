@@ -1,0 +1,40 @@
+menu.popup {
+    color: white;
+    background: #2E3D52;
+    border: 1dip #243142 solid;
+    /*margin: 0;*/
+    padding: 0;
+    border-radius: 2dip;
+}
+
+menu.popup li {
+    border: none;
+    padding-left: 10dip;
+    padding-right: 10dip;
+    color: white;
+    vertical-align: middle;
+}
+
+menu.popup li img{
+    width: 16dip;
+    height: 16dip;
+    margin-left: -2dip;
+    margin-right: 6dip;
+}
+
+#reveal img {
+    width: 14dip;
+    height: 14dip;
+    margin-top: 1dip;
+    margin-left: 0dip;
+    margin-right: 6dip;
+    foreground-image: url(/common/img/show.svg);
+}
+
+#about img {
+    foreground-image: url(/common/img/about.svg);
+}
+
+#exit img {
+    foreground-image: url(/common/img/exit.svg);
+}

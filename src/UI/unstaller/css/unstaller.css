@@ -1,0 +1,146 @@
+label {
+  font-size: 9pt;
+}
+
+.squre_btn {
+  background: none;
+  background-position: center;
+  width: 36dip;
+  height: 36dip;
+  margin: 0;
+  padding: 0;
+}
+.squre_btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  background-position: center;
+}
+
+#container {
+}
+
+#content {
+  padding-bottom: 30dip;
+  background: var(app_background);
+  horizontal-align: center;
+  min-width: 600dip;
+}
+
+#close_btn {
+  behavior: button;
+  foreground-position: 50% 50%;
+  foreground-size: 20dip;
+  /*foreground-image: url(/img/close.svg);*/
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#close_btn:hover {
+  opacity: 0.5;
+}
+
+
+#unstall_progress_group label {
+  color: #818f9c;
+}
+
+#logo_line {
+  horizontal-align: center;
+  flow: horizontal;
+  margin-top: 30dip;
+}
+
+#logo_img {
+  width: 50dip;
+  height: 50dip;
+}
+
+#title_label {
+  vertical-align: middle;
+  font-size: 30pt;
+  margin-left: 10dip;
+  white-space: nowrap;
+}
+
+#subtitle_line {
+  width: max-content;
+  flow: horizontal;
+  margin-top: 4dip;
+}
+
+#subtitle_label {
+  /*display: block;*/
+  /*margin-left: 54dip;*/
+  opacity: 0.2;
+  font-size: 10pt;
+}
+
+#unstall_btn {
+  background: var(front_color);
+  width: 180dip;
+  height: 42dip;
+  padding-left: 30dip;
+  padding-right: 30dip;
+  font-weight: bold;
+  /*cursor: pointer;*/
+  margin-top: 30dip;
+  font-size: 14pt;
+  opacity: 0.9;
+  cursor: pointer;
+}
+#unstall_btn:hover {
+  opacity: 1.0;
+}
+
+#unstall_progress {
+  height: 8dip;
+  background: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 188);
+  border-radius: 2dip;
+  /*foreground-color: #ee5e49;*/
+  margin-top: 30dip;
+  width: 90%;
+}
+
+#unstall_progress_tip {
+  float: left;
+  /*margin-left: 12dip;*/
+  margin-top: 6dip;
+}
+
+#unstall_progress_percentage {
+  float: right;
+  /*margin-right: 12dip;*/
+  margin-top: 6dip;
+  text-align: right;
+}
+
+#unstall_progress_group {
+  display: none;
+  horizontal-align: center;
+}
+
+#unstall_progress_tips_line {
+  width: 90%;
+}
+
+#bottom_btn_line {
+  flow: vertical;
+  horizontal-align: center;
+}
+
+#uninstall_btn {
+  position: relative;
+  width: 120dip;
+  height: 38dip;
+  /*cursor: pointer;*/
+  background: var(front_color);
+  font-weight: bold;
+  font-size: 14pt;
+  opacity: 0.9;
+  margin-top: 20dip;
+}
+#uninstall_btn:hover {
+  opacity: 1.0;
+}

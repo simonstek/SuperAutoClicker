@@ -1,0 +1,89 @@
+body {
+  height: * !important;
+}
+
+#caption {
+  /*display: inline-block;*/
+  padding: 0dip 0dip 0dip 10dip;
+  flow: horizontal;
+  vertical-align: middle;
+  background: var(caption_background);
+  /*border-bottom: 1dip solid rgba(255, 255, 255, 0.08);*/
+}
+
+#logo_img {
+  width: 16dip;
+  height: 16dip;
+}
+#title_label {
+  margin-left: 4dip;
+}
+
+.squre_btn {
+  behavior: button;
+  background: none;
+  background-position: center;
+  width: 36dip;
+  height: 36dip;
+  margin: 0;
+  padding: 0;
+}
+.squre_btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  background-position: center;
+}
+
+#close_btn {
+  foreground-size: 20dip;
+  opacity: 0.7;
+}
+
+#container {
+  min-width: 500dip;
+  /*min-height: 200dip;*/
+}
+
+#content {
+  position: relative;
+  background: var(app_background);
+  vertical-align: middle;
+  /*border: 1dip red solid;*/
+}
+
+#main {
+  padding: 20dip;
+  horizontal-align: center;
+}
+
+#text {
+  text-align: left;
+  display: block;
+  line-height: 20dip;
+  /*width: 200dip;*/
+  /*border: 1dip blue solid;*/
+}
+
+#btns_line {
+  margin-top: 20dip;
+  flow: horizontal;
+  horizontal-align: center;
+}
+
+#ok_btn {
+  background: var(front_color);
+  opacity: 0.9;
+  width: 40dip;
+}
+#ok_btn:hover {
+  opacity: 1.0;
+}
+
+#no_btn {
+  background: #ffffff33;
+  opacity: 0.8;
+  margin-left: 20dip;
+  width: 40dip;
+}
+#no_btn:hover {
+  opacity: 1.0;
+}

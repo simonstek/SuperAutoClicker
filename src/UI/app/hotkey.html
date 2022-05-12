@@ -1,0 +1,40 @@
+<html lang="zh"
+   window-resizable="false"
+   window-frame="transparent"
+   window-icon="/common/img/logo.png"
+   theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pick Cursor Window</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/hotkey.css" rel="stylesheet">
+
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import * as B from '/common/js/BrandConfig'
+  import { BaseElement } from '/common/js/BaseElement'
+  class HotkeyElement extends BaseElement {
+    render() {
+      return <body role="window-caption">
+        <div id="container">
+          <div id="content">
+              <label id="tip_text">Press keyboard to set new hotkey</label>
+              <label id="hotkey_text">F8</label>
+              <div id="bottom_btn_line">
+                <button id="cancel_btn" class="bottom_btn" tabindex="-1">Cancel</button>
+                <button id="ok_btn" class="bottom_btn" tabindex="-1">OK</button>
+              </div>
+          </div>
+        </div>
+      </body>
+    }
+  }
+  window.HotkeyElement = HotkeyElement
+  </script>
+  <script type="module" src="js/hotkey.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

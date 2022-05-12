@@ -1,0 +1,47 @@
+﻿<html lang="en"
+    window-resizable="false"
+    window-frame="transparent"
+    window-icon="/common/img/logo.png"
+    theme="light">
+<head>
+  <meta charset="UTF-8">
+  <title>BrandName Ununstaller</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/unstaller.css" rel="stylesheet">
+
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import * as B from '/common/js/BrandConfig'
+  import { BaseElement } from '/common/js/BaseElement'
+  class UnstallerElement extends BaseElement {
+
+  render() {
+    return <body role="window-caption">
+      <div id="container">
+        <div id="content">
+        <img id="close_btn" class="squre_btn" src="/common/img/close.svg"></img>
+          <div id="logo_line">
+              <img id="logo_img" src="/common/img/logo.svg"/>
+              <span id="title_label">{B.TranslatedBrandName}</span>
+          </div>
+          <div id="subtitle_line"><label id="subtitle_label">The best auto clicker ever</label></div>
+          <div id="unstall_progress_group">
+            <progress id="unstall_progress" value="0" max="100"/>
+            <div id="unstall_progress_tips_line">
+              <label id="unstall_progress_tip"></label>
+              <label id="unstall_progress_percentage">0%</label>
+            </div>
+          </div>
+          <div id="bottom_btn_line"><button id="uninstall_btn" class="btn">Uninstall</button></div>
+        </div>
+      </div>
+    </body>;
+    }
+  }
+  window.UnstallerElement = UnstallerElement
+  </script>
+  <script type="module" src="js/unstaller.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

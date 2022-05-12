@@ -1,0 +1,40 @@
+<html lang="zh"
+   window-resizable="false"
+   window-frame="transparent"
+   window-icon="/common/img/logo.png"
+   theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pick Cursor Window</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/pick.css" rel="stylesheet">
+
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import * as B from '/common/js/BrandConfig'
+  import { BaseElement } from '/common/js/BaseElement'
+  class PickElement extends BaseElement {
+    render() {
+      return <body>
+        <div id="container">
+          <div id="content">
+              <label id="tip_text">Click or press Esc to pick</label>
+              <div id="pos_line">
+                <label id="pos_text_x">X: </label>
+                <div id="splitter"></div>
+                <label id="pos_text_y">Y: </label>
+              </div>
+          </div>
+        </div>
+      </body>
+    }
+  }
+  window.PickElement = PickElement
+  </script>
+  <script type="module" src="js/pick.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

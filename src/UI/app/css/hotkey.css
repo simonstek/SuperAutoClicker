@@ -1,0 +1,58 @@
+label {
+  font-size: 9pt;
+}
+
+#container {
+}
+
+#content {
+  position: relative;
+  padding-top: 22dip;
+  padding-bottom: 16dip;
+  padding-left: 36dip;
+  padding-right: 36dip;
+  /*height: *;*/
+  /*flow: vertical;*/
+  horizontal-align: center;
+  vertical-align: middle;
+  background: var(app_background);
+  min-width: 440dip;
+}
+
+#tip_text {
+  flow: horizontal;
+  horizontal-align: center;
+}
+
+#hotkey_text {
+  display: block;
+  text-align: center;
+  font-size: 20pt;
+  margin-top: 20dip;
+  margin-bottom: 20dip;
+}
+
+#bottom_btn_line {
+  flow: horizontal;
+  horizontal-align: right;
+}
+
+.bottom_btn {
+  width: 40dip;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.bottom_btn:hover {
+  opacity: 1.0;
+}
+
+#cancel_btn {
+  background: none;
+  border: 1dip solid #99958a;
+}
+
+#ok_btn {
+  margin-left: 15dip;
+  background: #25dba0;
+  border: 1dip solid #25dba0;
+}

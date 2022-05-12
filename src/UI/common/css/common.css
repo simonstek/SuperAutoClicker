@@ -1,0 +1,339 @@
+html {
+  var(caption_background): #0C1524;
+  var(app_background): #293244;
+  var(btn_background): #354159;
+  var(btn_foreground): #596575;
+  var(label_color): #ffffff;
+  var(label_dark): #ffffffbb;
+  var(spliter_color): rgba(0, 0, 0, 0.1);
+  var(front_color): #339966;
+  var(border_color): #586574;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: white;
+  /*border: 1dip green solid;*/
+  overflow: hidden;
+}
+
+body {
+  padding: 6dip;
+  margin: 0;
+  /*border: 1dip red solid;*/
+  width: max-content;
+  height: max-content;
+}
+
+// 调试布局用
+//div { border: 1dip red dotted; }
+//ul li { border: 1dip green dotted; }
+//label { border: 1dip green dotted; }
+//img { border: 1dip blue dotted; }
+//button { border: 1dip cyan dotted; }
+//table { border: 1dip blue dotted; }
+//tbody { border: 1dip red dotted; }
+//thead { border: 1dip red dotted; }
+//th { border: 1dip green dotted; }
+
+#container {
+  border-radius: 4dip;
+  box-shadow: 0dip 0dip 4dip 2dip rgba(0,0,0,0.61);
+  overflow: hidden;
+  /*border: 1dip yellow solid;*/
+}
+
+#content {
+  border-radius: 4dip;
+}
+
+/* style block defining vertical scrollbar */
+@set my-v-scrollbar
+{
+  /*.prev { display: none; }*/
+  
+  /*.next { display: none; }*/
+  
+  .base,
+  .next-page, 
+  .prev-page 
+  {
+    background: var(app_background);
+  }
+
+  .slider 
+  {
+    border: none;
+    background: var(caption_background);
+    opacity: 0.8; 
+  }
+  
+  .next:disabled, .slider:disabled, 
+  .prev:disabled  { height:0; border:none; foreground-image:none; }
+  
+  .base:disabled
+  {
+  }
+    
+  .next:hover,   .slider:hover, 
+  .prev:hover     { opacity: 1.0; }
+  
+  .next:active,  .slider:active, 
+  .prev:active    { opacity: 1.0; }
+  
+  .base { width: 4dip; } /* explicit declaration of its width */
+  .corner { background-color: transparent; }
+  
+}
+
+select {
+  /*width: 50%;*/
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(label_color);
+}
+
+select popup {
+  border: 1dip var(caption_background) solid;
+}
+
+select option {
+  color: var(label_color);
+  background: var(app_background);
+}
+select option:hover {
+  background: var(caption_background);
+}
+
+select > button { 
+  foreground-image: url(stock:chevron-down-hollow); /* that arrow */
+  opacity: 0.4;
+}
+
+popup[role="tooltip"] { 
+  background: var(caption_background);
+  border: none;
+  border-radius: 2dip;
+  color: var(label_color);
+  padding: 2dip 10dip;
+  box-shadow: 0dip 0dip 4dip 2dip rgba(0,0,0,0.61);
+}
+
+menu {
+  background: var(app_background);
+  border: none;
+  border-radius: 2dip;
+  /*padding: 2dip 10dip;*/
+  box-shadow: 0dip 0dip 4dip 2dip rgba(0,0,0,0.61);
+}
+
+menu li {
+  padding-left: 10dip;
+  padding-right: 10dip;
+  color: var(label_color);
+  horizontal-align: left;
+  vertical-align: middle;
+}
+
+menu li img {
+  width: 16dip;
+  height: 16dip;
+  margin-right: 8dip;
+  opacity: 0.8;
+}
+
+table {
+  /*border:1px solid;*/
+  padding: 0;
+  border-spacing:0;
+  border-collapse: collapse;
+  text-align: center;
+  width: *;
+  height: *;
+}
+
+table > thead {
+  behavior:column-resizer; /* column sizing by user*/
+  background: var(caption_background);
+}
+
+table th, td { 
+  padding:4px;
+}
+
+table td { 
+  border-bottom:1px #00000033 solid; 
+  white-space: nowrap;
+}
+
+table .time_td {
+  padding-left: 20dip;
+}
+
+table tbody {
+  overflow-y: auto;
+  height: *;
+  vertical-scrollbar: my-v-scrollbar;
+}
+
+button {
+  border-style: none;
+  color: white;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 12pt;
+  color: var(label_color);
+}
+
+ul.radio_group {
+  flow: vertical;
+}
+
+ul.radio_group > li { 
+  behavior:radio; // behaves as radio button in a group
+  foreground-image: url(/common/img/radio_box.svg);
+  foreground-size: 16dip;
+  cursor: pointer;
+  padding-left: 22dip;
+  vertical-align: middle;
+}
+ul.radio_group > li:not(:first-child) {
+  /*margin-left: 30dip;*/
+  margin-top: 20dip;
+}
+
+ul.radio_group > li:checked {
+  foreground-image: url(/common/img/radio_box_fill.svg);
+}
+
+ul.radio_group li label {
+  font-size: 10pt;
+}
+
+label {
+  color: var(label_color);
+  font-family: Verdana;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  height: 22dip;
+  text-selection-caret-color: rgba(255, 255, 255, 0.5);
+}
+
+input caption {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+input button.plus {
+  foreground-image: url(/common/img/plus.svg);
+  foreground-size: 8dip 6dip;
+  opacity: 0.6;
+  background: none;
+  border: 1dip #ffffff44 solid;
+}
+
+input button.minus {
+  foreground-image: url(/common/img/minus.svg);
+  foreground-size: 8dip 6dip;
+  opacity: 0.6;
+  background: none;
+  border: 1dip #ffffff44 solid;
+}
+
+button|radio {
+  /*foreground-image: url(/img/radio_box.svg);*/
+  /*foreground-position: 0% 50%;*/
+  /*foreground-size: 16dip;*/
+}
+button|radio:checked {
+/*  foreground-image: url(/img/radio_box_fill.svg);
+  foreground-position: 0% 50%;
+  foreground-size: 16dip;*/
+}
+
+input[type=radio] {
+  opacity: 0;
+}
+
+input[type=radio] + label {
+  display: inline-block;
+  /*margin-left: 30dip;*/
+  margin-right: 4dip;
+  width: 16dip;
+  height: 16dip;
+  foreground-image: url(/common/img/radio_box.svg);
+  foreground-position: 50% 50%;
+  foreground-size: 16dip;
+}
+input[type=radio]:hover + label {
+  /*background-image: url(/img/radio_box_fill.png);*/
+  cursor: pointer;
+}
+input[type=radio]:checked + label {
+  foreground-image: url(/common/img/radio_box_fill.svg);
+  foreground-position: 50% 50%;
+  foreground-size: 16dip;
+}
+
+input[type=radio] + label + label {
+  vertical-align: middle;
+  margin-right: 10dip;
+}
+
+input[type=radio] + label + label:hover {
+  cursor: pointer;
+}
+
+/* visiblity rules: */
+[for-mode] { visibility:none; /* same as display:none */ }
+
+.nowrap{
+    white-space: nowrap;
+}
+
+info {
+  background: red;
+}
+
+fieldset{
+  padding: 0.5em; 
+  background: var(app_background); 
+  border: solid 1dip var(border_color);
+  white-space: nowrap;
+  width: max-content;
+  height: max-content;
+}
+
+fieldset legend {
+  color: var(label_color);
+  background: var(app_background);
+  transform: translate(0,-1.4em);
+  /*height: 20dip;*/
+  float: left;
+}
+
+fieldset select {
+  float: right;
+  height: 20dip;
+}
+
+.legend_div {
+  padding: 0.7em;
+  flow: vertical;
+}
+
+.legend_first {
+}

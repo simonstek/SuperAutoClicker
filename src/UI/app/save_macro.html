@@ -1,0 +1,47 @@
+<html lang="zh"
+   window-resizable="false"
+   window-frame="transparent"
+   window-icon="/common/img/logo.png"
+   theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BrandName Modal Window</title>
+  <link href="/common/css/common.css" rel="stylesheet">
+  <link href="css/save_macro.css" rel="stylesheet">
+  <script type="module" src='/common/js/locale.js'></script>
+  <script type="module">
+  import { BaseElement } from '/common/js/BaseElement'
+  class SaveMacroElement extends BaseElement {
+    render() {
+      return <body>
+        <div id="container">
+          <div id="content">
+            <div id="caption" role="window-caption">
+              <img id="logo_img" src="/common/img/logo.svg" />
+              <label id="title_label">Recorded Macro</label>
+              <div style="width: *;"></div>
+              <img id="close_btn" class="squre_btn" src="/common/img/close.svg" />
+            </div>
+            <div id="main">
+              <label>Macro Name: </label>
+              <input|text id="macro_name_input" />
+              <div id="btns_line">
+                <button id="record_again_btn" class="btn">Record again</button>
+                <button id="replay_btn" class="btn">Replay</button>
+                <button id="save_macro_btn" class="btn">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>;
+      }
+  }
+  window.SaveMacroElement = SaveMacroElement
+  </script>
+  <script type="module" src="js/SaveMacro.js"></script>
+  </head>
+  <body>
+  </body>
+</html>

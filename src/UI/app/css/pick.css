@@ -1,0 +1,44 @@
+label {
+  font-size: 9pt;
+}
+
+#container {
+  width: max-content;
+}
+
+#content {
+  position: relative;
+  padding-top: 12dip;
+  padding-bottom: 12dip;
+  padding-left: 16dip;
+  padding-right: 16dip;
+  /*height: *;*/
+  /*flow: vertical;*/
+  horizontal-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 4dip;
+  box-shadow: 0dip 0dip 4dip 2dip rgba(0,0,0,0.61);
+  background: var(app_background);
+}
+
+#tip_text {
+  flow: horizontal;
+  horizontal-align: center;
+}
+
+#pos_line {
+  margin-top: 10dip;
+}
+
+#pos_text_x {
+}
+
+#splitter {
+  display: inline-block;
+  width: 10dip;
+  height: 1dip;
+}
+
+#pos_text_y {
+}
