@@ -32,6 +32,10 @@ def start_configure():
     brand = config['brands']['superautoclicker.com']
     configure('superautoclicker.com', brand, native_version, ui_version)
 
+    # set release props
+    create_release_props_file(brand['processName'], 'src/Installer/ReleaseWin32.props')
+    create_release_props_file(brand['processName'], 'src/SuperAutoClicker/ReleaseWin32.props')
+
     os.chdir('cnf')
 
     print('configure complete!')
@@ -219,6 +223,17 @@ def write_resource_version(template_file, brand_name, file_suffix, desc, company
     f.close()
 
     pass
+
+
+def create_release_props_file(brand, prop):
+    f = open('{}.template'.format(prop), 'r')
+    str = f.read()
+    f.close()
+
+    str = str.replace('{BrandName}', brand)
+    f = open(prop, 'w')
+    f.write(str)
+    f.close()
 
 
 if __name__ == "__main__":
