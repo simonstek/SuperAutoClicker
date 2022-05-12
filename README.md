@@ -93,7 +93,7 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
 ### Project Setup
 
-Open command prompt and `cd` to `your-super-auto-clicker-git-repository\cnf`:
+Open command prompt and `cd /d <your-super-auto-clicker-git-repository>\cnf`:
 
 ![image-20220512100540179](doc/readme/img/README/image-20220512100540179.png)
 
