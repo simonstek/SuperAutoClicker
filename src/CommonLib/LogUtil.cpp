@@ -8,7 +8,7 @@
 
 std::shared_ptr<spdlog::logger> get_logger()
 {
-    QString gAppName = "PowerClicker";
+    QString gAppName = "SuperAutoClicker";
     auto name = gAppName.toStdString();
 
     auto logger = spdlog::get(name);

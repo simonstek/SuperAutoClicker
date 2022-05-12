@@ -1,3 +1,3 @@
 export var GlobalDef = {
-    DefaultLogFilter: 'PowerClicker'
+    DefaultLogFilter: 'SuperAutoClicker'
 }

@@ -15,7 +15,7 @@ static const QString gHotkeyWindowPath = QString("%1/app/hotkey.html").arg(gLoad
 static const QString gInstallerWindowPath = QString("%1/installer/installer.html").arg(gLoadingEntrance);
 static const QString gUnstallerWindowPath = QString("%1/unstaller/unstaller.html").arg(gLoadingEntrance);
 
-static const QString gMacroFileMagic = "PowerClicker Macro File {DD4FF017-AF7D-4DA5-8CA9-337DB6D8BFF8}";
+static const QString gMacroFileMagic = "SuperAutoClicker Macro File {DD4FF017-AF7D-4DA5-8CA9-337DB6D8BFF8}";
 static const int KSimulatingInput = 123321;
 
 extern QString gDebugPage;

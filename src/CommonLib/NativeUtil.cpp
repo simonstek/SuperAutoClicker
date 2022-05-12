@@ -586,7 +586,7 @@ bool NativeUtil::launch(sciter::string exeFullPath, sciter::string workDir, scit
 
 QPointer<QSharedMemory> NativeUtil::getSharedMemory(QString key)
 {
-	QString keyPrefix = "QSharedMemory_For_PowerClicker_";
+	QString keyPrefix = "QSharedMemory_For_SuperAutoClicker_";
 	QString fullKey = keyPrefix + key;
 
 	QPointer<QSharedMemory> sm = nullptr;

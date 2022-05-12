@@ -22,7 +22,7 @@ AppMain::AppMain(QObject *parent)
 int AppMain::uimain(std::function<int()> run)
 {
 	LOG_INFO("[{:>24}] \n\n\n\n", "AppMain");
-	LOG_INFO("[{:>24}] PowerClicker Installer initialiazing...................................", "AppMain");
+	LOG_INFO("[{:>24}] SuperAutoClicker Installer initialiazing...................................", "AppMain");
 
 	// resources archive 
 	sciter::archive::instance().open(aux::elements_of(resources)); // bind resources[] (defined in "resources.cpp") with the archive
