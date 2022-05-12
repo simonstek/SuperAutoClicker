@@ -61,7 +61,7 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
    ![image-20220512094909092](doc/readme/img/README/image-20220512094909092.png)
 
-   As seen above, the `Version` tag must be set to `Qt 5.6.2`. The `path` tag should be set to  `<your-Qt-5.6.2-installation-direcotry>\5.6\msvs2015`. Then click OK to finish Qt version setup.
+   As seen above, the `Version` tag must be set to `Qt 5.6.2`. The `Path` tag should be set to  `<your-Qt-5.6.2-installation-direcotry>\5.6\msvs2015`. Then click OK to finish Qt version setup.
 
    
 
