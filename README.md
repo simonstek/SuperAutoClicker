@@ -35,3 +35,45 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
 ## Build
 
+**Environment Setup**
+
+1. Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/). Make sure you have selected "Desktop development with C++":
+
+   ![image-20220512094230316](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512094230316.png)
+
+   
+
+2. Download and install [Qt 5.6.2](https://download.qt.io/new_archive/qt/5.6/5.6.2/qt-opensource-windows-x86-msvc2015-5.6.2.exe)
+
+   
+
+3. Install `Qt Visual Studio Tools` in VS2022(Menu--Extensions--Manage Extensions--Online-Visual Studio Marketplace):
+
+   ![image-20220512094410425](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512094410425.png)
+
+   ![image-20220512094450197](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512094450197.png)
+
+   
+
+4. After installing Qt Visual Studio Tools, restart VS2022. Configure Qt version(Menu--Extensions--Qt VS Tools--Qt Versions):
+
+   ![image-20220512094814600](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512094814600.png)
+
+   ![image-20220512094909092](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512094909092.png)
+
+   As seen above, the `Version` tag must be set to `Qt 5.6.2`. The `path` tag should be set to  `<your Qt 5.6.2 installation direcotry>\5.6\msvs2015`. Then click OK to finish Qt version setup.
+
+   
+
+5. Download and install [Python](https://www.python.org/downloads/). Python version must be >= 3.8. Make sure you have selected `Add Python to environment variables`:
+
+   ![image-20220512095803143](C:\Users\Simon\AppData\Roaming\Typora\typora-user-images\image-20220512095803143.png)
+
+
+
+
+
+**Project Setup**
+
+
+
