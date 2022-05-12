@@ -47,7 +47,7 @@ Download the latest version from the [releases](https://github.com/simonstek/Sup
 
    
 
-3. Install `Qt Visual Studio Tools` in VS2022(Menu--Extensions--Manage Extensions--Online-Visual Studio Marketplace):
+3. Install `Qt Visual Studio Tools` in VS2022(Menu--Extensions--Manage Extensions--Online--Visual Studio Marketplace):
 
    ![image-20220512094410425](doc/readme/img/README/image-20220512094410425.png)
 
