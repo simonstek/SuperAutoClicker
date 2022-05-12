@@ -14,7 +14,7 @@
 
 - Supports left, right, and middle mouse click. 
 - Click interval can vary from 0.001s to 999mins.
-- Infinite repeat or limited clicks.
+- Infinite or limited repeated clicks.
 - Auto click at specific point on the screen.
 - Record your mouse and keyboard operations, then replay.
 - Global hot key settings.
