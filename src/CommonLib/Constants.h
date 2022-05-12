@@ -4,11 +4,7 @@
 #include <QString>
 #include "Domain.h"
 
-#ifdef _DEBUG
-static const QString gLoadingEntrance = gRootDomain;
-#else
 static const QString gLoadingEntrance = "this://app";
-#endif
 
 static const QString gMainWindowPath = QString("%1/app/app.html").arg(gLoadingEntrance);
 static const QString gLoadingWindowPath = QString("%1/app/loading.html").arg(gLoadingEntrance);
